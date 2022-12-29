@@ -1,2 +1,6 @@
-# CursoGame2dJS
-Código do curso - Aprenda a desenvolver jogos com JavaScript
+# Aprendendo a desenvolver um jogo do zero em Java Script 
+
+Esse é um template básico para o curso.
+
+
+

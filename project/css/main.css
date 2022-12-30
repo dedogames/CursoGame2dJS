@@ -2,10 +2,33 @@ body{
     background-color: black;
 }
 #main_canvas{
-    border: 1px solid white;
+    border: 3px solid white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: cornflowerblue;
+    background: white;
+    /* display: none;  */
+}
+
+#show{
+  
+        border: 1px solid Peru;
+        margin: auto;
+        min-width: 200px;
+        max-height: 1024;
+        display: inline-block;
+        background: red;
+ 
+}
+
+
+ 
+#loader{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -80px; /* Negative half of width. */
+    background-position: center center;
 }

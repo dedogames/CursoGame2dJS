@@ -8,34 +8,47 @@ window.addEventListener('load',function(){//Incializa apenas após carregar toda
     const ctx = canvas.getContext('2d');
     canvas.width = 500;
     canvas.height = 500;
-
-    var posX = 10;
-    var posY = 10;
-    function update(deltaTime){
-        posX += 1;
-        posY += 1;
-    }
-
-    function draw(context){
-        ctx.fillStyle = 'white';
-        ctx.fillRect(posX, posY, 100, 100);
+    var allAssets = null;
+    var id_background = "bg_1";
+ 
+    function drawImages(context){
+        allAssets.images[id_background]
+        for (let index = 0; index < allAssets.images[id_background].length; index++) {
+            var currImage = allAssets.images[id_background][index];
+            context.drawImage( currImage.image,currImage.position.x,currImage.position.y2,currImage.width, currImage.height );
+        }
+        // 
+        // console.log(allAssets)
     }
 
     function loopGame(timeStamp){
         const deltaTime = timeStamp - lasttime;
         lasttime = timeStamp;  
 
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-        update(deltaTime);
-        draw(ctx);
- 
+         ctx.clearRect(0,0,canvas.width,canvas.height);
+         drawImages(ctx);
         requestAnimationFrame(loopGame);
-    }
+    } 
  
-
-    function main(){ 
-        loopGame(0);
+    function run(){
+        console.log()
+        // loopGame(0); 
+    //    ctx.clearRect(0,0,canvas.width,canvas.height);
+        allAssets.images[id_background]
+        for (let index = 0; index < allAssets.images[id_background].length; index++) {
+            var currImage = allAssets.images[id_background][index];
+             
+            console.log(currImage)
+            ctx.drawImage( currImage.image,currImage.position.x,currImage.position.y2,currImage.width, currImage.height );
+        }
     }
 
-    main();
+    function init(assets){  
+        allAssets = new LoadAssets(assets,run); 
+
+    } 
+
+    //
+    new LoadJson(init)
+
 });

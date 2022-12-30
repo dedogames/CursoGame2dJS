@@ -1,12 +1,10 @@
 window.addEventListener('load',function(){//Incializa apenas após carregar toda a pagina
 
-    
-
     let lasttime = 0;
     var game = null;
     const canvas = document.getElementById('main_canvas');
     const ctx = canvas.getContext('2d');
-
+ 
     function loopGame(timeStamp){
         const deltaTime = timeStamp - lasttime;
         lasttime = timeStamp;  
@@ -19,10 +17,10 @@ window.addEventListener('load',function(){//Incializa apenas após carregar toda
     }
  
 
-    function main(){ 
-        game = new Game(canvas.width,canvas.height);
-        if(game.isLoaded)
-            loopGame(0);
+    function main(){
+        var level = 1; 
+        game = new Game(level,canvas.width,canvas.height);
+        loopGame(0);
     }
 
     main();

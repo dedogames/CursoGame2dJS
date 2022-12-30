@@ -2,11 +2,11 @@
  * Classe principal, tudo relacionado ao jogo inicializa/restarta/finaliza a partir dela
  */
 class Game{
-    constructor(width,height){
+    constructor(level,width,height){
         //variaveis da class
         this.width = width;
         this.height = height;  
-        this.background = new Background(this);
+        this.background = new Background(level,this);
         this.isLoaded = false;
     }
 
@@ -15,9 +15,7 @@ class Game{
     }
 
     draw(ctx){
-       this.background.draw(ctx);
-    }
-
-    /** retorna context */
+         this.background.draw(ctx);  
+    } 
   
 }

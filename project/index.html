@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="css/main.css">
-        <title>Curso - Aprender a desenvolver um jogo 2D do zero</title>
-    </head>
-    <body>
-        <canvas id="main_canvas" width="500" height="500"></canvas>
-        <script src="js/constants.js"></script>
-        <script src="js/layer.js"></script>
-        <script src="js/background.js"></script>
-        <script src="js/game.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Curso - Aprender a desenvolver um jogo 2D do zero</title>
+</head>
+<div id="assets">
+
+    <div id="level1">
+        <div id="bg1" scale="0.39">
+            <img class="bg" src="assets/backgrounds/01/Layer1.png" speed="0"   pos="0,0"   offset="0,0"    effects='{"blur":0.0,"opacity":1}' fullbackground="true">
+            <img class="bg" src="assets/backgrounds/01/Layer2.png" speed="0.03"   pos="0,0"   offset="0,0"    effects='{"blur":0.0,"opacity":1}' fullbackground="true">
+            <img class="bg" src="assets/backgrounds/01/Layer3.png" speed="0.06" pos="0,0"   offset="700,0"  effects='{"blur":0,"opacity":1}'   fullbackground="false">
+            <img class="bg" src="assets/backgrounds/01/Layer4.png" speed="0.0999" pos="0,100" offset="500,0"  effects='{"blur":0,"opacity":0.9}'   fullbackground="false">
+            <img class="bg" src="assets/backgrounds/01/Layer5.png" speed="0.04" pos="0,300" offset="1500,0" effects='{"blur":15,"opacity":1}'  fullbackground="false">
+        </div>
+    </div>
+</div>
+<body>
+    
+    <canvas id="main_canvas" width="500" height="500"></canvas>
+
+
+    <script src="js/layer.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
 </html>
